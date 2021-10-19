@@ -19,12 +19,12 @@ struct OutOfBounds : public std::exception
     }
 };
 
-class ChessBoard {
+class board {
 private:
     vector<int> rows;
     int current_row = 0;
 public:
-    ChessBoard(int n) : rows(vector<int>(n,-1)){}
+    board(int n) : rows(vector<int>(n,-1)){}
     int next_row_to_be_filled(){
         return current_row;
     };
